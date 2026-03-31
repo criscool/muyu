@@ -1,0 +1,82 @@
+<view class="zen-page">
+  <image class="bg-image" src="/assets/images/zen-bg.svg" mode="aspectFill" />
+
+  <view class="content">
+    <view class="top-area">
+      <view class="title">{{modeMeta[mode].title}}</view>
+      <view class="merit">功德：{{merit}}</view>
+    </view>
+
+    <view class="main-stage">
+      <block wx:for="{{floatTexts}}" wx:key="id">
+        <view class="float-text" style="left: calc(50% + {{item.x}}rpx); --driftX: {{item.drift}}rpx;">+{{item.value}}</view>
+      </block>
+
+      <view class="hitbox" bindtap="onHitTarget">
+        <view class="target-scale-layer" style="transform: scale({{targetScale}});">
+          <view class="target-hit-layer {{isHitting ? 'target-hitting' : ''}}">
+            <view wx:if="{{mode === 'beads'}}" class="beads-ring">
+              <block wx:for="{{beadsNodes}}" wx:key="id">
+                <view class="bead-item" style="left: {{item.left}}rpx; top: {{item.top}}rpx; z-index: {{item.z}};">
+                  <text class="bead-fo">佛</text>
+                </view>
+              </block>
+            </view>
+            <image wx:else class="target-image {{isHitting ? 'target-image-hitting' : ''}}" src="{{modeMeta[mode].image}}" mode="aspectFit" />
+          </view>
+          <view class="hit-glow {{isHitting ? 'hit-glow-active' : ''}}"></view>
+          <view class="hit-ripple {{isHitting ? 'hit-ripple-active' : ''}}"></view>
+        </view>
+        <image wx:if="{{mode === 'muyu' && showBuddhaRise}}" class="buddha-rise buddha-rise-active" src="/assets/images/buddha-rise.svg" mode="aspectFit" />
+      </view>
+    </view>
+
+    <view class="settings-toggle" bindtap="toggleSettings">
+      <text>设置</text>
+      <text class="arrow">{{showSettings ? '收起' : '展开'}}</text>
+    </view>
+
+    <view class="settings" wx:if="{{showSettings}}">
+      <view class="setting-row">
+        <text>声音</text>
+        <switch checked="{{settings.soundOn}}" bindchange="onSwitchSound" color="#c68a44" />
+      </view>
+      <view class="setting-row">
+        <text>震动</text>
+        <switch checked="{{settings.vibrateOn}}" bindchange="onSwitchVibrate" color="#c68a44" />
+      </view>
+      <view class="setting-row">
+        <text>显示 +N 动画</text>
+        <switch checked="{{settings.showFloat}}" bindchange="onSwitchFloat" color="#c68a44" />
+      </view>
+      <view class="setting-row">
+        <text>每次累加</text>
+        <picker mode="selector" range="{{incrementOptions}}" range-key="label" value="{{incrementIndex}}" bindchange="onChangeIncrement">
+          <view class="picker-value">{{incrementOptions[incrementIndex].label}}</view>
+        </picker>
+      </view>
+      <view class="setting-row">
+        <text>{{modeMeta[mode].soundLabel}}</text>
+        <picker mode="selector" range="{{soundOptions}}" range-key="name" value="{{soundIndex}}" bindchange="onChangeSound">
+          <view class="picker-value">{{soundOptions[soundIndex].name}}</view>
+        </picker>
+      </view>
+      <button class="reset-btn" bindtap="onResetMerit">清零功德</button>
+    </view>
+  </view>
+
+  <view class="bottom-nav">
+    <view class="nav-item {{mode === 'muyu' ? 'nav-item-active' : ''}}" data-mode="muyu" bindtap="onSwitchMode">
+      <view class="nav-icon nav-icon-muyu"></view>
+      <view class="nav-label">木鱼</view>
+    </view>
+    <view class="nav-item {{mode === 'beads' ? 'nav-item-active' : ''}}" data-mode="beads" bindtap="onSwitchMode">
+      <view class="nav-icon nav-icon-beads"></view>
+      <view class="nav-label">念珠</view>
+    </view>
+    <view class="nav-item {{mode === 'bell' ? 'nav-item-active' : ''}}" data-mode="bell" bindtap="onSwitchMode">
+      <view class="nav-icon nav-icon-bell"></view>
+      <view class="nav-label">撞钟</view>
+    </view>
+  </view>
+</view>

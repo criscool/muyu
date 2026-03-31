@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1000" viewBox="0 0 1200 1000">
+  <defs>
+    <radialGradient id="bgGlow" cx="48%" cy="45%" r="44%">
+      <stop offset="0" stop-color="#f4c47a" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#f4c47a" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="b1" cx="32%" cy="30%" r="72%">
+      <stop offset="0" stop-color="#ffdca4"/>
+      <stop offset="0.45" stop-color="#de9b4f"/>
+      <stop offset="1" stop-color="#8a5528"/>
+    </radialGradient>
+    <radialGradient id="b2" cx="35%" cy="28%" r="72%">
+      <stop offset="0" stop-color="#ffe0b8"/>
+      <stop offset="0.45" stop-color="#cf8740"/>
+      <stop offset="1" stop-color="#7c4721"/>
+    </radialGradient>
+    <radialGradient id="b3" cx="35%" cy="30%" r="72%">
+      <stop offset="0" stop-color="#ffe6c5"/>
+      <stop offset="0.45" stop-color="#d7a46a"/>
+      <stop offset="1" stop-color="#8b6238"/>
+    </radialGradient>
+  </defs>
+
+  <ellipse cx="600" cy="510" rx="340" ry="230" fill="url(#bgGlow)"/>
+
+  <ellipse cx="600" cy="510" rx="295" ry="210" fill="none" stroke="#8d5a2f" stroke-opacity="0.35" stroke-width="10"/>
+
+  <g>
+    <circle cx="332" cy="500" r="54" fill="url(#b1)"/>
+    <circle cx="366" cy="390" r="50" fill="url(#b2)"/>
+    <circle cx="434" cy="308" r="48" fill="url(#b3)"/>
+    <circle cx="530" cy="260" r="46" fill="url(#b1)"/>
+    <circle cx="640" cy="248" r="46" fill="url(#b2)"/>
+    <circle cx="742" cy="274" r="47" fill="url(#b3)"/>
+    <circle cx="822" cy="336" r="49" fill="url(#b1)"/>
+    <circle cx="868" cy="424" r="50" fill="url(#b2)"/>
+    <circle cx="874" cy="528" r="53" fill="url(#b3)"/>
+    <circle cx="836" cy="622" r="52" fill="url(#b1)"/>
+    <circle cx="760" cy="694" r="50" fill="url(#b2)"/>
+    <circle cx="658" cy="738" r="49" fill="url(#b3)"/>
+    <circle cx="548" cy="748" r="50" fill="url(#b1)"/>
+    <circle cx="446" cy="716" r="50" fill="url(#b2)"/>
+    <circle cx="368" cy="648" r="52" fill="url(#b3)"/>
+    <circle cx="330" cy="556" r="54" fill="url(#b1)"/>
+  </g>
+
+  <g opacity="0.8" fill="#fff0d0">
+    <ellipse cx="314" cy="478" rx="14" ry="10"/>
+    <ellipse cx="350" cy="374" rx="13" ry="9"/>
+    <ellipse cx="423" cy="292" rx="12" ry="8"/>
+    <ellipse cx="520" cy="246" rx="12" ry="8"/>
+    <ellipse cx="630" cy="234" rx="12" ry="8"/>
+    <ellipse cx="734" cy="260" rx="12" ry="8"/>
+    <ellipse cx="815" cy="322" rx="12" ry="8"/>
+    <ellipse cx="860" cy="408" rx="13" ry="9"/>
+    <ellipse cx="868" cy="514" rx="14" ry="10"/>
+    <ellipse cx="830" cy="606" rx="14" ry="10"/>
+    <ellipse cx="752" cy="678" rx="13" ry="9"/>
+    <ellipse cx="648" cy="722" rx="12" ry="8"/>
+    <ellipse cx="538" cy="732" rx="12" ry="8"/>
+    <ellipse cx="438" cy="700" rx="13" ry="9"/>
+    <ellipse cx="360" cy="632" rx="14" ry="10"/>
+    <ellipse cx="314" cy="542" rx="14" ry="10"/>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+{
+  "desc": "muyu mini app sitemap",
+  "rules": [
+    {
+      "action": "allow",
+      "page": "*"
+    }
+  ]
+}

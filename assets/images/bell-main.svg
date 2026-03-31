@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <defs>
+    <radialGradient id="bg" cx="48%" cy="22%" r="88%">
+      <stop offset="0" stop-color="#ffe9ba"/>
+      <stop offset="0.42" stop-color="#d9a85e"/>
+      <stop offset="1" stop-color="#8f612c"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7a4b1f"/>
+      <stop offset="0.5" stop-color="#d5a25a"/>
+      <stop offset="1" stop-color="#7a4b1f"/>
+    </linearGradient>
+    <filter id="s" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#2a1808" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+  <ellipse cx="600" cy="770" rx="320" ry="66" fill="#2e1b0a" opacity="0.22"/>
+  <g filter="url(#s)">
+    <path d="M420 250H780L750 290H450L420 250Z" fill="#ad7536"/>
+    <path d="M360 310C360 190 452 120 600 120C748 120 840 190 840 310V420C840 560 910 640 950 690H250C290 640 360 560 360 420V310Z" fill="url(#bg)"/>
+    <path d="M300 680H900V735H300V680Z" fill="url(#ring)"/>
+    <ellipse cx="600" cy="735" rx="300" ry="34" fill="#70441b"/>
+    <ellipse cx="600" cy="310" rx="190" ry="86" fill="#ffe6b9" opacity="0.42"/>
+    <rect x="564" y="652" width="72" height="110" rx="32" fill="#b67a37"/>
+  </g>
+  <g transform="translate(880 420) rotate(-16)">
+    <rect x="0" y="30" width="260" height="36" rx="18" fill="#a5753e"/>
+    <rect x="10" y="38" width="242" height="10" rx="5" fill="#e7bf80" opacity="0.75"/>
+    <circle cx="22" cy="48" r="46" fill="#bb8748"/>
+    <circle cx="10" cy="34" r="16" fill="#f2cc8f" opacity="0.55"/>
+  </g>
+</svg>
